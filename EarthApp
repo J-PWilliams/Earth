@@ -1,0 +1,147 @@
+package com.jppw.earthapp;
+
+import java.util.ArrayList;
+
+public class EarthApp {
+	ArrayList<String>continents;
+	Continents cnts;
+	ArrayList<String>oceans;
+	Oceans ocns;
+	
+	public static void main(String[] args) {
+		EarthApp ea = new EarthApp();
+		ea.Earthybits();
+		
+	}
+	public void Earthybits(){
+		Earth e = new Earth();
+		Continents cnts = new Continents();
+		Oceans ocns = new Oceans();
+		System.out.println("Welcome to earth");
+		System.out.println("Earth has 4 Layers" + e.ic + "\nwhich is innermost" + e.oc + " is ne " + "\nthen we have the " + e.m + "\nnext Where we live which is " + e.c);
+		System.out.println("The oceans on Earth" + ocns.getContinentstoString());
+			
+		System.out.println("The Earth has 7 continents" + cnts.getContinents());
+		
+	}
+
+	
+
+}
+package com.jppw.earthapp;
+
+
+
+public class Earth implements Rotatable{
+	
+	
+	protected String np = "North Pole";
+	protected String sp = "South Pole";
+	protected String ic = "InnerCore";
+	protected String m = "Mantle";
+	protected String c = "Crust";
+	protected String oc  = "OuterCore";
+	protected String s = "Sun";
+	protected String mn = "Moon";
+	
+	
+	
+						
+			
+	
+	
+	
+	@Override
+	public void day(int d) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void night(int n) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void year(int y) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	public void setIc(String ic) {
+		this.ic = ic;
+	}
+
+	
+		
+	
+
+
+	
+	
+	
+	
+}
+
+package com.jppw.earthapp;
+
+import java.util.ArrayList;
+
+public class Continents extends Earth {
+	ArrayList<String>continents = new ArrayList<String>();
+	
+	private void cnts(){
+	continents.add("Africa");
+	continents.add("America North");
+	continents.add("America South");
+	continents.add("Antartica");
+	continents.add("Austrailia");
+	continents.add("Asia");
+	continents.add("Europe");
+	
+	
+	}
+	public ArrayList<String> getContinents(){
+		return continents;
+	}
+	
+	
+	
+	
+}
+
+package com.jppw.earthapp;
+
+import java.util.ArrayList;
+
+public class Oceans extends Earth{
+	
+
+	
+	private ArrayList<String>oceans = new ArrayList<String>();
+	
+		private void ocns(){
+		oceans.add("Africa");
+		oceans.add("America North");
+		oceans.add("America South");
+		oceans.add("Antartica");
+		oceans.add("Austrailia");
+		oceans.add("Asia");
+		oceans.add("Europe");
+		
+		}
+		public ArrayList<String> getOceans(){
+			return oceans;
+		}
+		
+	
+	
+	
+	
+	
+
+}
+
+
